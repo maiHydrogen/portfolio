@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Himanshu Rajput — Full-Stack Developer</title>
-<meta name="description" content="Portfolio of Himanshu Rajput, a Flutter and full-stack engineer at IIT Guwahati.">
-<meta property="og:title" content="Himanshu Rajput — Full-Stack Developer">
+<title>Himanshu — Full-Stack Developer</title>
+<meta name="description" content="Portfolio of Himanshu, a Flutter and full-stack engineer at IIT Guwahati.">
+<meta property="og:title" content="Himanshu — Full-Stack Developer">
 <meta property="og:description" content="Flutter, full-stack and AI-systems engineer. Open-source contributor, MLH Top 1% hacker.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23e2231a'/%3E%3Ccircle cx='50' cy='50' r='24' fill='none' stroke='white' stroke-width='10'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Geist:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -39,32 +39,7 @@
   <!-- ================= HERO ================= -->
   <section class="hero">
     <div class="hero-scene" aria-hidden="true">
-      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" class="hero-svg">
-        <defs>
-          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#0a0a0c"/>
-            <stop offset="55%" stop-color="#111114"/>
-            <stop offset="100%" stop-color="#050506"/>
-          </linearGradient>
-          <linearGradient id="tarmac" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#26262a"/>
-            <stop offset="100%" stop-color="#0b0b0d"/>
-          </linearGradient>
-        </defs>
-        <rect width="1600" height="900" fill="url(#sky)"/>
-        <rect y="470" width="1600" height="180" fill="url(#tarmac)"/>
-        <g opacity="0.55" filter="blur(1px)">
-          <rect x="-100" y="560" width="1900" height="14" fill="#e2231a"/>
-          <rect x="-100" y="600" width="1900" height="10" fill="#3a6fd8"/>
-          <rect x="-100" y="632" width="1900" height="7" fill="#e2231a"/>
-        </g>
-        <g opacity="0.9">
-          <path d="M980,760 L1180,760 L1230,700 L1340,690 L1420,650 L1460,660 L1440,700 L1360,740 L1220,790 L1000,800 Z" fill="#050506" stroke="#1c1c20" stroke-width="2"/>
-          <circle cx="1080" cy="800" r="42" fill="#050506" stroke="#1c1c20" stroke-width="3"/>
-          <circle cx="1350" cy="770" r="36" fill="#050506" stroke="#1c1c20" stroke-width="3"/>
-        </g>
-        <rect width="1600" height="900" fill="#050506" opacity="0.35"/>
-      </svg>
+      <img class="hero-bg" src="https://images.unsplash.com/photo-1614949194403-9602bdc14a3a?auto=format&fit=crop&w=1920&q=70" alt="" loading="eager" fetchpriority="high">
       <div class="hero-vignette"></div>
     </div>
 
@@ -72,7 +47,7 @@
       <p class="eyebrow center">
         <span class="eyebrow-line"></span> PORTFOLIO <span class="eyebrow-line"></span>
       </p>
-      <h1>Himanshu Rajput</h1>
+      <h1>Himanshu</h1>
       <p class="hero-role">Mobile &amp; Full-Stack Developer</p>
       <div class="cta-row center">
         <a class="btn btn-primary" href="#contact">Get In Touch</a>
@@ -92,7 +67,7 @@
     <div class="about-grid">
       <div class="about-copy">
         <p>Like a Formula 1 team perfecting every component for peak performance, I approach engineering with precision and curiosity. Every feature gets tested, every architecture decision gets weighed before it ships.</p>
-        <p>I'm a computer science student at IIT Guwahati who started out building mobile apps in Flutter, then branched into full-stack and AI-driven systems &mdash; most recently pairing language models with live data feeds to build tools that hold up under real deadlines, hackathon or otherwise.</p>
+        <p>I'm a civil engineering student at IIT Guwahati who taught himself to build mobile apps in Flutter, then branched into full-stack and AI-driven systems &mdash; most recently pairing language models with live data feeds to build tools that hold up under real deadlines, hackathon or otherwise. That civil engineering background is exactly why Strata, an AI pipeline that turns tender documents into BIM models, exists in the first place.</p>
 
         <div class="stat-row">
           <div class="stat-item">
@@ -155,45 +130,50 @@
     </div>
 
     <p class="skill-note">Self-rated, based on time spent per stack &mdash; not a certified score.</p>
+    <div class="skill-legend">
+      <span><i style="background:var(--purple)"></i> Fastest in its category</span>
+      <span><i style="background:var(--green)"></i> Personal best</span>
+      <span><i style="background:var(--yellow)"></i> On pace</span>
+    </div>
 
     <div class="skill-grid" id="skillGrid">
       <!-- mobile -->
-      <div class="skill-row" data-cat="mobile" style="--pct:90%">
+      <div class="skill-row" data-cat="mobile" style="--pct:90%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
         <div class="skill-head">
           <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Flutter</span>
           <span class="skill-pct">90%</span>
         </div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="mobile" style="--pct:88%">
+      <div class="skill-row" data-cat="mobile" style="--pct:88%; --tier:var(--green); --tier-dark:var(--green-dark)">
         <div class="skill-head">
           <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Dart</span>
           <span class="skill-pct">88%</span>
         </div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="mobile" style="--pct:80%">
+      <div class="skill-row" data-cat="mobile" style="--pct:80%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
         <div class="skill-head">
           <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">HTML5 &amp; CSS3</span>
           <span class="skill-pct">80%</span>
         </div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="mobile" style="--pct:75%">
+      <div class="skill-row" data-cat="mobile" style="--pct:75%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
         <div class="skill-head">
           <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">JavaScript</span>
           <span class="skill-pct">75%</span>
         </div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="mobile" style="--pct:65%">
+      <div class="skill-row" data-cat="mobile" style="--pct:65%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
         <div class="skill-head">
           <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">TypeScript</span>
           <span class="skill-pct">65%</span>
         </div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="mobile" style="--pct:70%">
+      <div class="skill-row" data-cat="mobile" style="--pct:70%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
         <div class="skill-head">
           <span class="skill-icon">&#9673;</span><span class="skill-name">Figma</span>
           <span class="skill-pct">70%</span>
@@ -202,42 +182,42 @@
       </div>
 
       <!-- backend -->
-      <div class="skill-row" data-cat="backend" style="--pct:80%">
+      <div class="skill-row" data-cat="backend" style="--pct:80%; --tier:var(--green); --tier-dark:var(--green-dark)">
         <div class="skill-head">
           <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Python</span>
           <span class="skill-pct">80%</span>
         </div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="backend" style="--pct:85%">
+      <div class="skill-row" data-cat="backend" style="--pct:85%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
         <div class="skill-head">
           <span class="skill-icon">&#9670;</span><span class="skill-name">Firebase</span>
           <span class="skill-pct">85%</span>
         </div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="backend" style="--pct:65%">
+      <div class="skill-row" data-cat="backend" style="--pct:65%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
         <div class="skill-head">
           <span class="skill-icon">&#9670;</span><span class="skill-name">Node.js</span>
           <span class="skill-pct">65%</span>
         </div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="backend" style="--pct:60%">
+      <div class="skill-row" data-cat="backend" style="--pct:60%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
         <div class="skill-head">
           <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Next.js</span>
           <span class="skill-pct">60%</span>
         </div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="backend" style="--pct:65%">
+      <div class="skill-row" data-cat="backend" style="--pct:65%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
         <div class="skill-head">
           <span class="skill-icon">&#9670;</span><span class="skill-name">MongoDB</span>
           <span class="skill-pct">65%</span>
         </div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="backend" style="--pct:55%">
+      <div class="skill-row" data-cat="backend" style="--pct:55%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
         <div class="skill-head">
           <span class="skill-icon">&#9673;</span><span class="skill-name">Machine Learning</span>
           <span class="skill-pct">55%</span>
@@ -246,28 +226,28 @@
       </div>
 
       <!-- tools -->
-      <div class="skill-row" data-cat="tools" style="--pct:90%">
+      <div class="skill-row" data-cat="tools" style="--pct:90%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
         <div class="skill-head">
           <span class="skill-icon">&#9737;</span><span class="skill-name">Git &amp; GitHub</span>
           <span class="skill-pct">90%</span>
         </div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="tools" style="--pct:78%">
+      <div class="skill-row" data-cat="tools" style="--pct:78%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
         <div class="skill-head">
           <span class="skill-icon">&#9737;</span><span class="skill-name">Android Studio</span>
           <span class="skill-pct">78%</span>
         </div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="tools" style="--pct:85%">
+      <div class="skill-row" data-cat="tools" style="--pct:85%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
         <div class="skill-head">
           <span class="skill-icon">&#9737;</span><span class="skill-name">Open-Source Workflows</span>
           <span class="skill-pct">85%</span>
         </div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="tools" style="--pct:88%">
+      <div class="skill-row" data-cat="tools" style="--pct:88%; --tier:var(--green); --tier-dark:var(--green-dark)">
         <div class="skill-head">
           <span class="skill-icon">&#9737;</span><span class="skill-name">Hackathon Delivery</span>
           <span class="skill-pct">88%</span>
@@ -284,20 +264,8 @@
 
     <div class="log-list">
       <div class="log-row">
-        <span class="log-year">2024</span>
-        <div><h3>Hacktoberfest 2024</h3><p>Contributor</p></div>
-      </div>
-      <div class="log-row">
         <span class="log-year">2025</span>
-        <div><h3>FOSSHACK'25</h3><p>Participant</p></div>
-      </div>
-      <div class="log-row">
-        <span class="log-year">2025</span>
-        <div><h3>MLH Global Hack Week</h3><p>Ranked Top 1% global hacker</p></div>
-      </div>
-      <div class="log-row">
-        <span class="log-year">2025</span>
-        <div><h3>Google Summer of Code</h3><p>Applicant</p></div>
+        <div><h3>Codegeist 2025</h3><p>Built FW47 for the Atlassian &times; Williams Racing challenge</p></div>
       </div>
       <div class="log-row">
         <span class="log-year">2025</span>
@@ -305,7 +273,19 @@
       </div>
       <div class="log-row">
         <span class="log-year">2025</span>
-        <div><h3>Codegeist 2025</h3><p>Built FW47 for the Atlassian &times; Williams Racing challenge</p></div>
+        <div><h3>Google Summer of Code</h3><p>Applicant</p></div>
+      </div>
+      <div class="log-row">
+        <span class="log-year">2025</span>
+        <div><h3>MLH Global Hack Week</h3><p>Ranked Top 1% global hacker</p></div>
+      </div>
+      <div class="log-row">
+        <span class="log-year">2025</span>
+        <div><h3>FOSSHACK'25</h3><p>Participant</p></div>
+      </div>
+      <div class="log-row">
+        <span class="log-year">2024</span>
+        <div><h3>Hacktoberfest 2024</h3><p>Contributor</p></div>
       </div>
     </div>
   </section>
@@ -319,7 +299,7 @@
 
       <article class="project-card">
         <div class="project-media">
-          <img src="https://github.com/user-attachments/assets/5196f9f9-95d8-48f8-ab93-3e85c9895309" alt="FW47 logo, an AI race engineer for Jira">
+          <img src="https://github.com/user-attachments/assets/5196f9f9-95d8-48f8-ab93-3e85c9895309" alt="FW47 logo, an AI race engineer for Jira" loading="lazy" decoding="async">
         </div>
         <div class="project-body">
           <h3>FW47 &mdash; AI Race Engineer for Jira</h3>
@@ -338,10 +318,10 @@
 
       <article class="project-card">
         <div class="project-media cover-plate cover-purple">
-          <span>IBIE</span>
+          <span>Strata</span>
         </div>
         <div class="project-body">
-          <h3>IBIE &mdash; Intent-to-BIM Intelligence Engine</h3>
+          <h3>Strata &mdash; Intent-to-BIM Intelligence Engine</h3>
           <p>Turns unstructured tender notices and scopes of work into populated 10D BIM models: a Python AI pipeline behind a Next.js frontend.</p>
           <div class="tag-row">
             <span class="tag">Python</span><span class="tag">Next.js</span><span class="tag">TypeScript</span>
@@ -361,7 +341,7 @@
 
       <article class="project-card">
         <div class="project-media">
-          <img src="https://github.com/user-attachments/assets/985b210e-ca7a-4a96-b479-9367e4538f45" alt="SortAid scholarship portal screenshot">
+          <img src="https://github.com/user-attachments/assets/985b210e-ca7a-4a96-b479-9367e4538f45" alt="SortAid scholarship portal screenshot" loading="lazy" decoding="async">
         </div>
         <div class="project-body">
           <h3>SortAid</h3>
@@ -380,7 +360,7 @@
 
       <article class="project-card">
         <div class="project-media">
-          <img src="https://github.com/user-attachments/assets/964b357f-b278-4271-a775-b683c1a16188" alt="USay real-time chat app screenshot">
+          <img src="https://github.com/user-attachments/assets/964b357f-b278-4271-a775-b683c1a16188" alt="USay real-time chat app screenshot" loading="lazy" decoding="async">
         </div>
         <div class="project-body">
           <h3>USay</h3>
@@ -459,6 +439,10 @@
           </a>
         </div>
         <div class="side-card">
+          <h3>Current Base</h3>
+          <p>IIT Guwahati, Assam, India</p>
+        </div>
+        <div class="side-card">
           <h3>Response Time</h3>
           <p>I'm quick to reply &mdash; usually within a day.</p>
         </div>
@@ -469,8 +453,8 @@
 
 <footer class="footer wrap">
   <div class="footer-inner">
-    <span class="footer-brand"><span class="brand-mark small"></span> &copy; 2026 Himanshu Rajput. All rights reserved.</span>
-    <span class="footer-note">Built with <span class="heart">&#9829;</span> and HTML/CSS</span>
+    <span class="footer-brand"><span class="brand-mark small"></span> &copy; 2026 Himanshu. All rights reserved.</span>
+    <span class="footer-note">Built with <span class="heart">&#9829;</span> and HTML, CSS &amp; JavaScript</span>
   </div>
 </footer>
 

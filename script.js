@@ -1,3 +1,18 @@
+// Skill bars: filled at rest, replay the fill animation from 0 on hover
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.skill-row').forEach((row) => {
+  const fill = row.querySelector('.skill-fill');
+  if (!fill || reduceMotion) return;
+  row.addEventListener('mouseenter', () => {
+    fill.style.transition = 'none';
+    fill.style.width = '0%';
+    // eslint-disable-next-line no-unused-expressions
+    fill.offsetWidth; // force reflow so the reset applies before the transition back on
+    fill.style.transition = '';
+    fill.style.width = 'var(--pct)';
+  });
+});
+
 // Skill category filter
 const filterBtns = document.querySelectorAll('.filter-btn');
 const skillRows = document.querySelectorAll('.skill-row');

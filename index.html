@@ -3,212 +3,477 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Himanshu Rajput — Mobile & Full-Stack Engineer</title>
-<meta name="description" content="Portfolio of Himanshu Rajput, a Flutter and full-stack engineer at IIT Guwahati, styled after an F1 timing tower.">
-<meta property="og:title" content="Himanshu Rajput — Mobile & Full-Stack Engineer">
+<title>Himanshu Rajput — Full-Stack Developer</title>
+<meta name="description" content="Portfolio of Himanshu Rajput, a Flutter and full-stack engineer at IIT Guwahati.">
+<meta property="og:title" content="Himanshu Rajput — Full-Stack Developer">
 <meta property="og:description" content="Flutter, full-stack and AI-systems engineer. Open-source contributor, MLH Top 1% hacker.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%8E%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23e2231a'/%3E%3Ccircle cx='50' cy='50' r='24' fill='none' stroke='white' stroke-width='10'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<div class="top-livery" aria-hidden="true"></div>
+<div class="scroll-indicator" id="scrollIndicator" aria-hidden="true"></div>
+
 <header class="topbar">
   <div class="topbar-inner">
-    <div class="brand"><span class="brand-no">47</span> HIMANSHU RAJPUT</div>
+    <a class="brand" href="#top">
+      <span class="brand-mark"></span>
+      PORTFOLIO
+    </a>
     <nav class="links">
       <a href="#about">About</a>
-      <a href="#sectors">Sectors</a>
-      <a href="#grid">Grid</a>
-      <a href="#log">Log</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<main>
-  <div class="hero wrap">
-    <svg class="telemetry" viewBox="0 0 600 220" aria-hidden="true">
-      <polyline points="0,160 60,150 90,80 130,90 170,40 220,60 260,30 310,70 350,50 400,110 440,90 480,140 520,120 560,170 600,150"
-        fill="none" stroke="#c81e3a" stroke-width="2"/>
-      <polyline points="0,200 50,195 100,180 140,185 190,150 230,160 280,120 330,140 370,110 420,150 460,160 500,190 540,180 600,200"
-        fill="none" stroke="#8a5cd6" stroke-width="2"/>
-    </svg>
-    <div class="hero-grid">
-      <div>
-        <p class="eyebrow">Season 2026 &middot; Driver Profile</p>
-        <h1>Himanshu<br>Rajput<span class="car-no">No.47</span></h1>
-        <p class="tagline">Mobile &amp; full-stack engineer building fast, reliable software under real time pressure &mdash; from AI race-engineering agents to real-time apps. Based at IIT Guwahati.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#grid">View the grid</a>
-          <a class="btn btn-ghost" href="#contact">Get in touch</a>
-        </div>
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-scene" aria-hidden="true">
+      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" class="hero-svg">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0a0a0c"/>
+            <stop offset="55%" stop-color="#111114"/>
+            <stop offset="100%" stop-color="#050506"/>
+          </linearGradient>
+          <linearGradient id="tarmac" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#26262a"/>
+            <stop offset="100%" stop-color="#0b0b0d"/>
+          </linearGradient>
+        </defs>
+        <rect width="1600" height="900" fill="url(#sky)"/>
+        <rect y="470" width="1600" height="180" fill="url(#tarmac)"/>
+        <g opacity="0.55" filter="blur(1px)">
+          <rect x="-100" y="560" width="1900" height="14" fill="#e2231a"/>
+          <rect x="-100" y="600" width="1900" height="10" fill="#3a6fd8"/>
+          <rect x="-100" y="632" width="1900" height="7" fill="#e2231a"/>
+        </g>
+        <g opacity="0.9">
+          <path d="M980,760 L1180,760 L1230,700 L1340,690 L1420,650 L1460,660 L1440,700 L1360,740 L1220,790 L1000,800 Z" fill="#050506" stroke="#1c1c20" stroke-width="2"/>
+          <circle cx="1080" cy="800" r="42" fill="#050506" stroke="#1c1c20" stroke-width="3"/>
+          <circle cx="1350" cy="770" r="36" fill="#050506" stroke="#1c1c20" stroke-width="3"/>
+        </g>
+        <rect width="1600" height="900" fill="#050506" opacity="0.35"/>
+      </svg>
+      <div class="hero-vignette"></div>
+    </div>
+
+    <div class="hero-content wrap">
+      <p class="eyebrow center">
+        <span class="eyebrow-line"></span> PORTFOLIO <span class="eyebrow-line"></span>
+      </p>
+      <h1>Himanshu Rajput</h1>
+      <p class="hero-role">Mobile &amp; Full-Stack Developer</p>
+      <div class="cta-row center">
+        <a class="btn btn-primary" href="#contact">Get In Touch</a>
+        <a class="btn btn-ghost" href="#about">Learn More</a>
       </div>
-      <div class="spec-card">
-        <div class="plate">
-          <span class="mono" style="font-size:0.72rem;letter-spacing:0.1em;color:var(--mute);text-transform:uppercase;">Driver card</span>
-          <span class="num">47</span>
-        </div>
-        <dl style="margin:0;">
-          <div class="spec-row"><dt>Base</dt><dd>Guwahati, India</dd></div>
-          <div class="spec-row"><dt>Discipline</dt><dd>Mobile &middot; AI Systems</dd></div>
-          <div class="spec-row"><dt>Entry</dt><dd>Open source, 2023&ndash;</dd></div>
-          <div class="spec-row"><dt>Status</dt><dd><span class="status-live">Available for opportunities</span></dd></div>
-        </dl>
-      </div>
     </div>
-  </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
 
-  <div class="stripe"></div>
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="wrap section">
+    <p class="eyebrow"><span class="eyebrow-line"></span> ABOUT ME</p>
+    <h2 class="section-title">Driving Innovation Forward</h2>
 
-  <div class="wrap">
-    <div class="stats" style="margin-top:2.5rem;">
-      <div class="stat"><div class="num">26</div><div class="lbl">Public repositories shipped since 2023</div></div>
-      <div class="stat"><div class="num">Top 1%</div><div class="lbl">MLH Global Hack Week, global hacker ranking</div></div>
-      <div class="stat"><div class="num">Super</div><div class="lbl">Hacktoberfest 2025 contributor level</div></div>
-      <div class="stat"><div class="num">6</div><div class="lbl">Hackathons &amp; programs entered, 2024&ndash;2025</div></div>
-    </div>
-  </div>
-
-  <section id="about" class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Driver bio</p>
-      <h2>About</h2>
-    </div>
     <div class="about-grid">
-      <div>
-        <p>Himanshu is a software engineer and open-source contributor studying at IIT Guwahati. He started out building mobile apps in Flutter, then moved into full-stack and AI-driven systems &mdash; most recently pairing language models with live data feeds to build tools that hold up under real time pressure.</p>
-        <p>He's a regular on the hackathon and open-source circuit: a Top 1% finish at MLH's Global Hack Week, Super Contributor status at Hacktoberfest 2025, and builds ranging from a Jira race-engineering agent to a scholarship-matching platform used by students. He's currently teaching himself machine learning from Aurélien Géron and François Chollet's texts.</p>
-        <p class="muted">Off the keyboard, he follows Formula 1 closely &mdash; which is where this page's timing-tower styling comes from.</p>
-      </div>
-      <div class="spec-card">
-        <div class="plate">
-          <span class="mono" style="font-size:0.72rem;letter-spacing:0.1em;color:var(--mute);text-transform:uppercase;">Currently</span>
+      <div class="about-copy">
+        <p>Like a Formula 1 team perfecting every component for peak performance, I approach engineering with precision and curiosity. Every feature gets tested, every architecture decision gets weighed before it ships.</p>
+        <p>I'm a computer science student at IIT Guwahati who started out building mobile apps in Flutter, then branched into full-stack and AI-driven systems &mdash; most recently pairing language models with live data feeds to build tools that hold up under real deadlines, hackathon or otherwise.</p>
+
+        <div class="stat-row">
+          <div class="stat-item">
+            <span class="stat-num">2+</span>
+            <span class="stat-lbl">Years Building</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">26</span>
+            <span class="stat-lbl">Repos Shipped</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">Top 1%</span>
+            <span class="stat-lbl">MLH Global Hacker</span>
+          </div>
         </div>
-        <dl style="margin:0;">
-          <div class="spec-row"><dt>Building</dt><dd>IBIE &mdash; AI &rarr; BIM pipeline</dd></div>
-          <div class="spec-row"><dt>Learning</dt><dd>Applied ML &amp; deep learning</dd></div>
-          <div class="spec-row"><dt>Open to</dt><dd>Internships &amp; new roles</dd></div>
-        </dl>
+      </div>
+
+      <div class="feature-list">
+        <div class="feature-card">
+          <span class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </span>
+          <div>
+            <h3>Ships Fast</h3>
+            <p>Built and shipped under real hackathon deadlines</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 01-10 0V4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M7 5H4a1 1 0 00-1 1v1a4 4 0 004 4M17 5h3a1 1 0 011 1v1a4 4 0 01-4 4" stroke="currentColor" stroke-width="2"/></svg>
+          </span>
+          <div>
+            <h3>Open-Source First</h3>
+            <p>Hacktoberfest 2025 Super Contributor</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+          </span>
+          <div>
+            <h3>Goal Oriented</h3>
+            <p>Focused on results that matter</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="sectors" class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Timing splits</p>
-      <h2>Sectors</h2>
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="wrap section">
+    <p class="eyebrow"><span class="eyebrow-line"></span> TELEMETRY</p>
+    <h2 class="section-title">Technical Performance</h2>
+
+    <div class="filter-row" role="tablist" aria-label="Filter skills by category">
+      <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Skills</button>
+      <button class="filter-btn" data-filter="mobile" role="tab" aria-selected="false">Mobile &amp; Frontend</button>
+      <button class="filter-btn" data-filter="backend" role="tab" aria-selected="false">Backend &amp; Data</button>
+      <button class="filter-btn" data-filter="tools" role="tab" aria-selected="false">Tools</button>
     </div>
-    <div class="sector" data-s="1">
-      <div class="sector-tag"><span class="s">S1</span><span class="name">App &amp; Frontend</span></div>
-      <div class="chips">
-        <span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">JavaScript</span>
-        <span class="chip">TypeScript</span><span class="chip">HTML5 / CSS3</span><span class="chip">Figma</span>
+
+    <p class="skill-note">Self-rated, based on time spent per stack &mdash; not a certified score.</p>
+
+    <div class="skill-grid" id="skillGrid">
+      <!-- mobile -->
+      <div class="skill-row" data-cat="mobile" style="--pct:90%">
+        <div class="skill-head">
+          <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Flutter</span>
+          <span class="skill-pct">90%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-    </div>
-    <div class="sector" data-s="2">
-      <div class="sector-tag"><span class="s">S2</span><span class="name">Backend &amp; Data</span></div>
-      <div class="chips">
-        <span class="chip">Python</span><span class="chip">Node.js</span><span class="chip">Next.js</span>
-        <span class="chip">MongoDB</span><span class="chip">Firebase</span><span class="chip">Machine Learning</span>
+      <div class="skill-row" data-cat="mobile" style="--pct:88%">
+        <div class="skill-head">
+          <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Dart</span>
+          <span class="skill-pct">88%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-    </div>
-    <div class="sector" data-s="3">
-      <div class="sector-tag"><span class="s">S3</span><span class="name">Tools &amp; Practice</span></div>
-      <div class="chips">
-        <span class="chip">Git &amp; GitHub</span><span class="chip">Android Studio</span>
-        <span class="chip">Open-source workflows</span><span class="chip">Hackathons</span>
+      <div class="skill-row" data-cat="mobile" style="--pct:80%">
+        <div class="skill-head">
+          <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">HTML5 &amp; CSS3</span>
+          <span class="skill-pct">80%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-cat="mobile" style="--pct:75%">
+        <div class="skill-head">
+          <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">JavaScript</span>
+          <span class="skill-pct">75%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-cat="mobile" style="--pct:65%">
+        <div class="skill-head">
+          <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">TypeScript</span>
+          <span class="skill-pct">65%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-cat="mobile" style="--pct:70%">
+        <div class="skill-head">
+          <span class="skill-icon">&#9673;</span><span class="skill-name">Figma</span>
+          <span class="skill-pct">70%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+
+      <!-- backend -->
+      <div class="skill-row" data-cat="backend" style="--pct:80%">
+        <div class="skill-head">
+          <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Python</span>
+          <span class="skill-pct">80%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-cat="backend" style="--pct:85%">
+        <div class="skill-head">
+          <span class="skill-icon">&#9670;</span><span class="skill-name">Firebase</span>
+          <span class="skill-pct">85%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-cat="backend" style="--pct:65%">
+        <div class="skill-head">
+          <span class="skill-icon">&#9670;</span><span class="skill-name">Node.js</span>
+          <span class="skill-pct">65%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-cat="backend" style="--pct:60%">
+        <div class="skill-head">
+          <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Next.js</span>
+          <span class="skill-pct">60%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-cat="backend" style="--pct:65%">
+        <div class="skill-head">
+          <span class="skill-icon">&#9670;</span><span class="skill-name">MongoDB</span>
+          <span class="skill-pct">65%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-cat="backend" style="--pct:55%">
+        <div class="skill-head">
+          <span class="skill-icon">&#9673;</span><span class="skill-name">Machine Learning</span>
+          <span class="skill-pct">55%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+
+      <!-- tools -->
+      <div class="skill-row" data-cat="tools" style="--pct:90%">
+        <div class="skill-head">
+          <span class="skill-icon">&#9737;</span><span class="skill-name">Git &amp; GitHub</span>
+          <span class="skill-pct">90%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-cat="tools" style="--pct:78%">
+        <div class="skill-head">
+          <span class="skill-icon">&#9737;</span><span class="skill-name">Android Studio</span>
+          <span class="skill-pct">78%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-cat="tools" style="--pct:85%">
+        <div class="skill-head">
+          <span class="skill-icon">&#9737;</span><span class="skill-name">Open-Source Workflows</span>
+          <span class="skill-pct">85%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-cat="tools" style="--pct:88%">
+        <div class="skill-head">
+          <span class="skill-icon">&#9737;</span><span class="skill-name">Hackathon Delivery</span>
+          <span class="skill-pct">88%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
     </div>
   </section>
 
-  <section id="grid" class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Starting grid</p>
-      <h2>Projects</h2>
-    </div>
-    <div class="grid-head">
-      <span>Pos</span><span>Project</span><span>Result</span><span>Stack</span><span></span>
-    </div>
+  <!-- ================= SEASON LOG ================= -->
+  <section id="log" class="wrap section">
+    <p class="eyebrow"><span class="eyebrow-line"></span> MILESTONES</p>
+    <h2 class="section-title">Season Log</h2>
 
-    <a class="grid-row" href="https://github.com/maiHydrogen/FW47" target="_blank" rel="noopener">
-      <span class="pos">P1</span>
-      <span class="proj"><span class="proj-name">FW47 &mdash; AI Race Engineer for Jira</span>
-        <div class="proj-desc">A Rovo AI agent reads live OpenF1 telemetry and surfaces repair procedures inside a Forge dashboard, built for Atlassian's Williams Racing challenge.</div></span>
-      <span class="result">Codegeist 2025 submission</span>
-      <span class="stack">JavaScript<br>Atlassian Forge &middot; Rovo</span>
-      <span class="view">View &nearr;</span>
-    </a>
-
-    <a class="grid-row" href="https://github.com/maiHydrogen/strata" target="_blank" rel="noopener">
-      <span class="pos">P2</span>
-      <span class="proj"><span class="proj-name">IBIE &mdash; Intent-to-BIM Intelligence Engine</span>
-        <div class="proj-desc">Turns unstructured tender notices and scopes of work into populated 10D BIM models: a Python AI pipeline (strata) behind a Next.js frontend (bimez).</div></span>
-      <span class="result">AI pipeline + web frontend</span>
-      <span class="stack">Python &middot; Next.js<br>TypeScript</span>
-      <span class="view">View &nearr;</span>
-    </a>
-
-    <a class="grid-row" href="https://github.com/maiHydrogen/SortAid" target="_blank" rel="noopener">
-      <span class="pos">P3</span>
-      <span class="proj"><span class="proj-name">SortAid</span>
-        <div class="proj-desc">Scrapes government, education-board and scholarship platforms to match available aid to a student's profile.</div></span>
-      <span class="result">Hacktoberfest 2025 accepted</span>
-      <span class="stack">Python</span>
-      <span class="view">View &nearr;</span>
-    </a>
-
-    <a class="grid-row" href="https://github.com/maiHydrogen/USay" target="_blank" rel="noopener">
-      <span class="pos">P4</span>
-      <span class="proj"><span class="proj-name">USay</span>
-        <div class="proj-desc">Real-time cross-platform chat app with Firebase-backed presence, read receipts and push notifications.</div></span>
-      <span class="result">Built for Ethos&apos;24</span>
-      <span class="stack">Flutter &middot; Firebase</span>
-      <span class="view">View &nearr;</span>
-    </a>
-
-    <a class="grid-row" href="https://github.com/maiHydrogen/ICEbot" target="_blank" rel="noopener">
-      <span class="pos">P5</span>
-      <span class="proj"><span class="proj-name">ICEbot</span>
-        <div class="proj-desc">Published Flutter package: a FAQ chatbot with fuzzy multi-strategy search and a themeable Material UI.</div></span>
-      <span class="result">Hacktoberfest 2025 accepted</span>
-      <span class="stack">Dart &middot; Flutter</span>
-      <span class="view">View &nearr;</span>
-    </a>
-  </section>
-
-  <section id="log" class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Race log</p>
-      <h2>Season log</h2>
-    </div>
-    <div class="log">
-      <div class="log-row"><span class="log-year">2024</span><div><div class="log-event">Hacktoberfest 2024</div><div class="log-detail">Contributor</div></div></div>
-      <div class="log-row"><span class="log-year">2025</span><div><div class="log-event">FOSSHACK'25</div><div class="log-detail">Participant</div></div></div>
-      <div class="log-row"><span class="log-year">2025</span><div><div class="log-event">MLH Global Hack Week</div><div class="log-detail">Ranked Top 1% global hacker</div></div></div>
-      <div class="log-row"><span class="log-year">2025</span><div><div class="log-event">Google Summer of Code</div><div class="log-detail">Applicant</div></div></div>
-      <div class="log-row"><span class="log-year">2025</span><div><div class="log-event">Hacktoberfest 2025</div><div class="log-detail">Super Contributor level</div></div></div>
-      <div class="log-row"><span class="log-year">2025</span><div><div class="log-event">Codegeist 2025</div><div class="log-detail">Built FW47 for the Atlassian &times; Williams Racing challenge</div></div></div>
+    <div class="log-list">
+      <div class="log-row">
+        <span class="log-year">2024</span>
+        <div><h3>Hacktoberfest 2024</h3><p>Contributor</p></div>
+      </div>
+      <div class="log-row">
+        <span class="log-year">2025</span>
+        <div><h3>FOSSHACK'25</h3><p>Participant</p></div>
+      </div>
+      <div class="log-row">
+        <span class="log-year">2025</span>
+        <div><h3>MLH Global Hack Week</h3><p>Ranked Top 1% global hacker</p></div>
+      </div>
+      <div class="log-row">
+        <span class="log-year">2025</span>
+        <div><h3>Google Summer of Code</h3><p>Applicant</p></div>
+      </div>
+      <div class="log-row">
+        <span class="log-year">2025</span>
+        <div><h3>Hacktoberfest 2025</h3><p>Super Contributor level</p></div>
+      </div>
+      <div class="log-row">
+        <span class="log-year">2025</span>
+        <div><h3>Codegeist 2025</h3><p>Built FW47 for the Atlassian &times; Williams Racing challenge</p></div>
+      </div>
     </div>
   </section>
 
-  <footer id="contact" class="wrap">
-    <p class="eyebrow">Pit lane</p>
-    <h2 style="font-size:clamp(1.8rem,3.5vw,2.4rem); text-transform:uppercase;">Looking for the next seat.</h2>
-    <p style="color:var(--mute); max-width:52ch; margin-top:0.8rem; line-height:1.7;">Open to internships and full-time roles in mobile and full-stack engineering. Reach out below.</p>
-    <div class="contact-row">
-      <a class="pill" href="mailto:taespadhihary@gmail.com"><span class="dot"></span>Email</a>
-      <a class="pill" href="https://github.com/maiHydrogen" target="_blank" rel="noopener"><span class="dot" style="background:var(--purple);"></span>GitHub</a>
-      <a class="pill" href="https://www.linkedin.com/in/himanshu-rajput-02980429a" target="_blank" rel="noopener"><span class="dot" style="background:var(--ink);"></span>LinkedIn</a>
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="wrap section">
+    <p class="eyebrow"><span class="eyebrow-line"></span> RECENT WINS</p>
+    <h2 class="section-title">Featured Projects</h2>
+
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-media">
+          <img src="https://github.com/user-attachments/assets/5196f9f9-95d8-48f8-ab93-3e85c9895309" alt="FW47 logo, an AI race engineer for Jira">
+        </div>
+        <div class="project-body">
+          <h3>FW47 &mdash; AI Race Engineer for Jira</h3>
+          <p>A Rovo AI agent reads live OpenF1 telemetry and surfaces repair procedures inside a Forge dashboard, built for the Atlassian &times; Williams Racing challenge.</p>
+          <div class="tag-row">
+            <span class="tag">JavaScript</span><span class="tag">Atlassian Forge</span><span class="tag">Rovo</span>
+          </div>
+          <div class="link-row">
+            <a href="https://github.com/maiHydrogen/FW47" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media cover-plate cover-purple">
+          <span>IBIE</span>
+        </div>
+        <div class="project-body">
+          <h3>IBIE &mdash; Intent-to-BIM Intelligence Engine</h3>
+          <p>Turns unstructured tender notices and scopes of work into populated 10D BIM models: a Python AI pipeline behind a Next.js frontend.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">Next.js</span><span class="tag">TypeScript</span>
+          </div>
+          <div class="link-row">
+            <a href="https://github.com/maiHydrogen/strata" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
+              Pipeline
+            </a>
+            <a href="https://github.com/maiHydrogen/bimez" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
+              Frontend
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media">
+          <img src="https://github.com/user-attachments/assets/985b210e-ca7a-4a96-b479-9367e4538f45" alt="SortAid scholarship portal screenshot">
+        </div>
+        <div class="project-body">
+          <h3>SortAid</h3>
+          <p>Scrapes government, education-board and scholarship platforms to match available aid to a student's profile.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+          </div>
+          <div class="link-row">
+            <a href="https://github.com/maiHydrogen/SortAid" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media">
+          <img src="https://github.com/user-attachments/assets/964b357f-b278-4271-a775-b683c1a16188" alt="USay real-time chat app screenshot">
+        </div>
+        <div class="project-body">
+          <h3>USay</h3>
+          <p>Real-time cross-platform chat app with Firebase-backed presence, read receipts and push notifications. Built for Ethos'24.</p>
+          <div class="tag-row">
+            <span class="tag">Flutter</span><span class="tag">Firebase</span>
+          </div>
+          <div class="link-row">
+            <a href="https://github.com/maiHydrogen/USay" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-media cover-plate cover-red">
+          <span>ICE</span>
+        </div>
+        <div class="project-body">
+          <h3>ICEbot</h3>
+          <p>Published Flutter package: a FAQ chatbot with fuzzy multi-strategy search and a themeable Material UI.</p>
+          <div class="tag-row">
+            <span class="tag">Dart</span><span class="tag">Flutter</span>
+          </div>
+          <div class="link-row">
+            <a href="https://github.com/maiHydrogen/ICEbot" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
     </div>
-    <div class="foot-bottom">
-      <span>&copy; 2026 Himanshu Rajput</span>
-      <span>No. 47 &middot; IIT Guwahati</span>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="wrap section">
+    <h2 class="section-title center">Let's Work Together</h2>
+    <p class="contact-sub">Ready to build something together? Send a message and let's talk.</p>
+
+    <div class="contact-grid">
+      <form class="contact-form" id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          Send Message
+        </button>
+        <p class="form-note">Opens your email client with this message pre-filled.</p>
+      </form>
+
+      <aside class="contact-side">
+        <div class="side-card">
+          <h3>Connect With Me</h3>
+          <a href="https://github.com/maiHydrogen" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/himanshu-rajput-02980429a" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.9 8.65 22 11.4 22 14.7V21h-4v-5.6c0-1.34-.02-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97V21h-4V9z" fill="currentColor"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:taespadhihary@gmail.com">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4V4z" stroke="currentColor" stroke-width="2"/><path d="M4 6l8 7 8-7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            Email
+          </a>
+        </div>
+        <div class="side-card">
+          <h3>Response Time</h3>
+          <p>I'm quick to reply &mdash; usually within a day.</p>
+        </div>
+      </aside>
     </div>
-  </footer>
+  </section>
 </main>
+
+<footer class="footer wrap">
+  <div class="footer-inner">
+    <span class="footer-brand"><span class="brand-mark small"></span> &copy; 2026 Himanshu Rajput. All rights reserved.</span>
+    <span class="footer-note">Built with <span class="heart">&#9829;</span> and HTML/CSS</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

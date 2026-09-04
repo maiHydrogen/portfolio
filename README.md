@@ -20,3 +20,9 @@ Then open `http://localhost:8000`.
 
 - `index.html` — page markup and content
 - `styles.css` — all styling
+- `script.js` — skill-tab filtering, scroll-progress indicator, contact form (mailto fallback)
+
+## Notes
+
+- The contact form has no backend — it opens the visitor's email client pre-filled (see `script.js`). To get a native in-page "sent!" confirmation instead, wire the form to a service like Formspree or Web3Forms.
+- Skill percentages are self-rated, not certified — adjust the `--pct` values and numbers in `index.html`/`styles.css` to your own comfort level.

@@ -1,3 +1,38 @@
+// Track switch: Product & Data / Civil Engineering / Software Engineering
+const TRACK_ROLES = {
+  pm: 'Product Manager · Data & AI',
+  civil: 'Civil Engineering Student',
+  sde: 'Full-Stack Developer',
+};
+const heroRole = document.getElementById('heroRole');
+const trackBtns = document.querySelectorAll('.track-btn');
+const trackContentEls = document.querySelectorAll('[data-track-content]');
+
+function applyTrack(track) {
+  document.body.dataset.track = track;
+  trackContentEls.forEach((el) => {
+    el.classList.toggle('track-hidden', el.dataset.trackContent !== track);
+  });
+  trackBtns.forEach((btn) => {
+    const active = btn.dataset.track === track;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-selected', String(active));
+  });
+  if (heroRole && TRACK_ROLES[track]) heroRole.textContent = TRACK_ROLES[track];
+  try { localStorage.setItem('himanshu-track', track); } catch (e) { /* private mode, ignore */ }
+}
+
+trackBtns.forEach((btn) => {
+  btn.addEventListener('click', () => applyTrack(btn.dataset.track));
+});
+
+let savedTrack = 'pm';
+try {
+  const stored = localStorage.getItem('himanshu-track');
+  if (stored === 'pm' || stored === 'civil' || stored === 'sde') savedTrack = stored;
+} catch (e) { /* private mode, ignore */ }
+applyTrack(savedTrack);
+
 // Skill bars: filled at rest, replay the fill animation from 0 on hover
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.querySelectorAll('.skill-row').forEach((row) => {
@@ -13,13 +48,16 @@ document.querySelectorAll('.skill-row').forEach((row) => {
   });
 });
 
-// Skill category filter
-const filterBtns = document.querySelectorAll('.filter-btn');
-const skillRows = document.querySelectorAll('.skill-row');
+// Skill category filter (scoped so each track's own filter row only touches its own rows)
+const filterBtns = document.querySelectorAll('.filter-btn:not(.track-btn)');
 
 filterBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
-    filterBtns.forEach((b) => {
+    const track = btn.dataset.trackContent;
+    const siblingBtns = document.querySelectorAll(`.filter-btn[data-track-content="${track}"]`);
+    const rows = document.querySelectorAll(`.skill-row[data-track-content="${track}"]`);
+
+    siblingBtns.forEach((b) => {
       b.classList.remove('active');
       b.setAttribute('aria-selected', 'false');
     });
@@ -27,7 +65,7 @@ filterBtns.forEach((btn) => {
     btn.setAttribute('aria-selected', 'true');
 
     const filter = btn.dataset.filter;
-    skillRows.forEach((row) => {
+    rows.forEach((row) => {
       const show = filter === 'all' || row.dataset.cat === filter;
       row.style.display = show ? '' : 'none';
     });
@@ -56,5 +94,5 @@ form.addEventListener('submit', (e) => {
 
   const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
   const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-  window.location.href = `mailto:taespadhihary@gmail.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:himanshu.4043@iitg.ac.in?subject=${subject}&body=${body}`;
 });

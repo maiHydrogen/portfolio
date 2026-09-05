@@ -147,6 +147,13 @@ nav.links a:hover::after, nav.links a:focus-visible::after{ width:100%; }
   50%{ transform:translate(-50%,8px); }
 }
 
+/* ---------- Track switch ---------- */
+.track-switch-section{ padding:1.5rem clamp(1.25rem,4vw,2.5rem) 0; text-align:center; }
+.track-switch{ display:flex; gap:0.7rem; flex-wrap:wrap; justify-content:center; }
+
+/* ---------- Track visibility ---------- */
+.track-hidden{ display:none !important; }
+
 /* ---------- Section titles ---------- */
 .section-title{ font-size:clamp(2rem,4vw,2.7rem); font-weight:700; margin-bottom:2.5rem; }
 
@@ -173,6 +180,23 @@ nav.links a:hover::after, nav.links a:focus-visible::after{ width:100%; }
 }
 .feature-card h3{ font-size:1.02rem; font-weight:600; }
 .feature-card p{ color:var(--mute); font-size:0.88rem; margin:0.3rem 0 0; }
+
+/* ---------- Experience ---------- */
+.exp-list{ display:flex; flex-direction:column; gap:1rem; }
+.exp-card{
+  background:var(--panel); border:1px solid var(--border); border-radius:14px;
+  padding:1.5rem 1.6rem; transition:border-color .2s ease, transform .2s ease;
+}
+.exp-card:hover{ border-color:var(--red); transform:translateY(-2px); }
+.exp-head{
+  display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline;
+  gap:0.3rem 1rem; margin-bottom:0.3rem;
+}
+.exp-head h3{ font-size:1.05rem; font-weight:600; }
+.exp-meta{ font-family:'Geist',monospace; font-size:0.78rem; color:var(--mute); white-space:nowrap; }
+.exp-org{ color:var(--red); font-size:0.85rem; font-weight:500; margin:0 0 0.7rem; }
+.exp-bullets{ margin:0; padding-left:1.15rem; color:var(--mute); font-size:0.9rem; line-height:1.65; display:flex; flex-direction:column; gap:0.4rem; }
+.exp-bullets li::marker{ color:var(--red); }
 
 /* ---------- Skills ---------- */
 .filter-row{ display:flex; gap:0.7rem; flex-wrap:wrap; margin-bottom:0.9rem; }
@@ -232,6 +256,8 @@ nav.links a:hover::after, nav.links a:focus-visible::after{ width:100%; }
 .cover-plate span{ font-family:'Unbounded',sans-serif; font-weight:700; font-size:1.6rem; letter-spacing:0.05em; color:rgba(255,255,255,0.9); }
 .cover-purple{ background:linear-gradient(135deg, #241a35, #3a2560); }
 .cover-red{ background:linear-gradient(135deg, #2a1210, var(--red-dark)); }
+.cover-green{ background:linear-gradient(135deg, #12261c, #1f5138); }
+.cover-blue{ background:linear-gradient(135deg, #151d2c, #23385c); }
 .project-body{ padding:1.4rem 1.4rem 1.5rem; display:flex; flex-direction:column; gap:0.7rem; flex:1; }
 .project-body h3{ font-size:1.08rem; font-weight:600; }
 .project-body > p{ color:var(--mute); font-size:0.88rem; line-height:1.6; margin:0; flex:1; }
@@ -289,6 +315,7 @@ nav.links a:hover::after, nav.links a:focus-visible::after{ width:100%; }
   .stat-row{ flex-wrap:wrap; row-gap:1.2rem; }
   .filter-row{ overflow-x:auto; flex-wrap:nowrap; padding-bottom:0.3rem; }
   .log-row{ flex-direction:column; gap:0.3rem; }
+  .exp-head{ flex-direction:column; gap:0.15rem; }
 }
 
 @media (prefers-reduced-motion:reduce){

@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Himanshu — Full-Stack Developer</title>
-<meta name="description" content="Portfolio of Himanshu, a Flutter and full-stack engineer at IIT Guwahati.">
-<meta property="og:title" content="Himanshu — Full-Stack Developer">
-<meta property="og:description" content="Flutter, full-stack and AI-systems engineer. Open-source contributor, MLH Top 1% hacker.">
+<title>Himanshu — Product, Data &amp; Engineering</title>
+<meta name="description" content="Portfolio of Himanshu, a civil engineering student at IIT Guwahati working across product, data science, and full-stack engineering.">
+<meta property="og:title" content="Himanshu — Product, Data &amp; Engineering">
+<meta property="og:description" content="Product & data case studies, civil engineering research, and full-stack projects — IIT Guwahati.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23e2231a'/%3E%3Ccircle cx='50' cy='50' r='24' fill='none' stroke='white' stroke-width='10'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Geist:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-track="pm">
 
 <div class="top-livery" aria-hidden="true"></div>
 <div class="scroll-indicator" id="scrollIndicator" aria-hidden="true"></div>
@@ -27,6 +27,7 @@
     </a>
     <nav class="links">
       <a href="#about">About</a>
+      <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
@@ -48,7 +49,7 @@
         <span class="eyebrow-line"></span> PORTFOLIO <span class="eyebrow-line"></span>
       </p>
       <h1>Himanshu</h1>
-      <p class="hero-role">Mobile &amp; Full-Stack Developer</p>
+      <p class="hero-role" id="heroRole">Product Manager &middot; Data &amp; AI</p>
       <div class="cta-row center">
         <a class="btn btn-primary" href="#contact">Get In Touch</a>
         <a class="btn btn-ghost" href="#about">Learn More</a>
@@ -59,6 +60,16 @@
     </a>
   </section>
 
+  <!-- ================= TRACK SWITCH ================= -->
+  <section class="wrap track-switch-section">
+    <p class="eyebrow center"><span class="eyebrow-line"></span> CHOOSE A LENS <span class="eyebrow-line"></span></p>
+    <div class="track-switch" role="tablist" aria-label="Choose which experience to view">
+      <button class="filter-btn track-btn active" data-track="pm" role="tab" aria-selected="true">Product &amp; Data</button>
+      <button class="filter-btn track-btn" data-track="civil" role="tab" aria-selected="false">Civil Engineering</button>
+      <button class="filter-btn track-btn" data-track="sde" role="tab" aria-selected="false">Software Engineering</button>
+    </div>
+  </section>
+
   <!-- ================= ABOUT ================= -->
   <section id="about" class="wrap section">
     <p class="eyebrow"><span class="eyebrow-line"></span> ABOUT ME</p>
@@ -66,21 +77,53 @@
 
     <div class="about-grid">
       <div class="about-copy">
-        <p>Like a Formula 1 team perfecting every component for peak performance, I approach engineering with precision and curiosity. Every feature gets tested, every architecture decision gets weighed before it ships.</p>
-        <p>I'm a civil engineering student at IIT Guwahati who taught himself to build mobile apps in Flutter, then branched into full-stack and AI-driven systems &mdash; most recently pairing language models with live data feeds to build tools that hold up under real deadlines, hackathon or otherwise. That civil engineering background is exactly why Strata, an AI pipeline that turns tender documents into BIM models, exists in the first place.</p>
+        <p data-track-content="pm">I care about the gap between a good idea and a shipped feature &mdash; the user research, the prioritization call, the metric that proves it worked. At IIT Guwahati I've applied that lens to both physical-world workflows and software products.</p>
+        <p data-track-content="pm">Recent work spans a demand-forecasting classifier that lifted minority-class precision by 22% across 109K+ inventory records, a RICE-prioritized feature redesign for a social-investing app, and the user research that reshaped how an AI construction-tech pipeline gets designed in the first place.</p>
+
+        <p data-track-content="civil">I'm a civil engineering student at IIT Guwahati who spends as much time in STAAD.Pro and Revit as in a studio. My focus sits where structural engineering meets software &mdash; automating the parts of a design workflow that are still done by hand.</p>
+        <p data-track-content="civil">That's shown up in a seismic analysis of a four-storey school building under IS 1893 Zone V parameters, a materials study on limestone-blended concrete, and Strata &mdash; a research project that reads tender documents and generates code-compliant BIM layouts automatically.</p>
+
+        <p data-track-content="sde">Like a Formula 1 team perfecting every component for peak performance, I approach engineering with precision and curiosity. Every feature gets tested, every architecture decision gets weighed before it ships.</p>
+        <p data-track-content="sde">I'm a civil engineering student at IIT Guwahati who taught himself to build mobile apps in Flutter, then branched into full-stack and AI-driven systems &mdash; from a Flutter FAQ chatbot shipped in production to a sub-500ms telemetry pipeline for a Formula 1 race-engineering tool.</p>
 
         <div class="stat-row">
-          <div class="stat-item">
-            <span class="stat-num">2+</span>
-            <span class="stat-lbl">Years Building</span>
+          <div class="stat-item" data-track-content="pm">
+            <span class="stat-num">109K+</span>
+            <span class="stat-lbl">Inventory records analyzed</span>
           </div>
-          <div class="stat-item">
+          <div class="stat-item" data-track-content="pm">
+            <span class="stat-num">22%</span>
+            <span class="stat-lbl">ML precision improvement</span>
+          </div>
+          <div class="stat-item" data-track-content="pm">
+            <span class="stat-num">8,000+</span>
+            <span class="stat-lbl">Students served (ops)</span>
+          </div>
+
+          <div class="stat-item" data-track-content="civil">
+            <span class="stat-num">&#8377;19.1L</span>
+            <span class="stat-lbl">Project budget estimated</span>
+          </div>
+          <div class="stat-item" data-track-content="civil">
+            <span class="stat-num">50%</span>
+            <span class="stat-lbl">Clinker reduction researched</span>
+          </div>
+          <div class="stat-item" data-track-content="civil">
+            <span class="stat-num">G+3</span>
+            <span class="stat-lbl">School building seismic-designed</span>
+          </div>
+
+          <div class="stat-item" data-track-content="sde">
+            <span class="stat-num">5,900+</span>
+            <span class="stat-lbl">Campus app users shipped to</span>
+          </div>
+          <div class="stat-item" data-track-content="sde">
             <span class="stat-num">26</span>
-            <span class="stat-lbl">Repos Shipped</span>
+            <span class="stat-lbl">Repos shipped</span>
           </div>
-          <div class="stat-item">
-            <span class="stat-num">Top 1%</span>
-            <span class="stat-lbl">MLH Global Hacker</span>
+          <div class="stat-item" data-track-content="sde">
+            <span class="stat-num">&lt;500ms</span>
+            <span class="stat-lbl">Anomaly-detection latency</span>
           </div>
         </div>
       </div>
@@ -117,16 +160,102 @@
     </div>
   </section>
 
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience" class="wrap section">
+    <p class="eyebrow"><span class="eyebrow-line"></span> TRACK RECORD</p>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="exp-list">
+
+      <!-- PM+DS -->
+      <div class="exp-card" data-track-content="pm">
+        <div class="exp-head"><h3>Summer Research Intern</h3><span class="exp-meta">May 2026 &ndash; Jul 2026</span></div>
+        <p class="exp-org">Dept. of Civil Engineering, IIT Guwahati &middot; under Dr. Sparsh Johari</p>
+        <ul class="exp-bullets">
+          <li>Defined the problem space around the "interpretation gap" in Indian pre-construction workflows, where parameters omitted from scope-of-work documents force manual cross-referencing against building codes.</li>
+          <li>Ran a competitive teardown of 3 incumbent approaches across a 5-criteria matrix covering regulatory compliance, output usability and technical feasibility.</li>
+          <li>Ran a small-scale feasibility test that killed the planned supervised-learning approach on data-availability grounds, and respecified the criteria that shaped the actual project.</li>
+        </ul>
+      </div>
+      <div class="exp-card" data-track-content="pm">
+        <div class="exp-head"><h3>Software Testing &amp; Development Intern</h3><span class="exp-meta">Aug 2025 &ndash; Nov 2025</span></div>
+        <p class="exp-org">eSpace AI Tech Private Limited &middot; Noida, India (Remote)</p>
+        <ul class="exp-bullets">
+          <li>Ran a cohort analysis across user demographics to isolate high-conversion segments, and used those insights to prioritize which flows got usability-tested first.</li>
+          <li>Shipped a Flutter FAQ chatbot that deflected common queries from the support queue, alongside a ticket-triage service that auto-scored and routed incoming tickets.</li>
+        </ul>
+      </div>
+
+      <!-- Civil -->
+      <div class="exp-card" data-track-content="civil">
+        <div class="exp-head"><h3>Summer Research Intern</h3><span class="exp-meta">Jul 2026</span></div>
+        <p class="exp-org">Dept. of Civil Engineering, IIT Guwahati &middot; under Dr. Sparsh Johari</p>
+        <ul class="exp-bullets">
+          <li>Surveyed BIM adoption patterns and literature across the AEC industry to identify bottlenecks in pre-construction document interpretation and regulatory compliance checking.</li>
+          <li>Proposed a standardized 5-stage compliance-extraction framework adhering to National Building Code (NBC) and Indian Standard (IS) guidelines, replacing manual design-checking workflows.</li>
+        </ul>
+      </div>
+      <div class="exp-card" data-track-content="civil">
+        <div class="exp-head"><h3>Software Testing &amp; Development Intern</h3><span class="exp-meta">Aug 2025</span></div>
+        <p class="exp-org">eSpace AI Tech Private Limited &middot; Noida, India (Remote)</p>
+        <ul class="exp-bullets">
+          <li>Analysed user demographics to identify high-conversion segments, including married postgraduates and resident faculty.</li>
+          <li>Ran hands-on UX testing across emergency-response user flows to refine app reliability, and shipped an in-app FAQ chatbot that automated resident support and onboarding.</li>
+        </ul>
+      </div>
+
+      <!-- SDE -->
+      <div class="exp-card" data-track-content="sde">
+        <div class="exp-head"><h3>Summer Research Intern</h3><span class="exp-meta">May 2026 &ndash; Jul 2026</span></div>
+        <p class="exp-org">Dept. of Civil Engineering, IIT Guwahati &middot; under Dr. Sparsh Johari</p>
+        <ul class="exp-bullets">
+          <li>Benchmarked 3 approaches to automated document-to-BIM generation &mdash; LLM multi-agent code generation, visual 3D generation, and MCP-based Revit co-pilots &mdash; across regulatory grounding, schema fidelity and engineering logic.</li>
+          <li>Built an automated document-processing pipeline combining OCR for unstructured tenders with few-shot LLM extraction into structured JSON schemas.</li>
+          <li>Ran a feasibility assessment that killed a planned supervised-learning approach on data-availability grounds, keeping geometry generation deterministic downstream.</li>
+        </ul>
+      </div>
+      <div class="exp-card" data-track-content="sde">
+        <div class="exp-head"><h3>Software Testing &amp; Development Intern</h3><span class="exp-meta">Aug 2025 &ndash; Nov 2025</span></div>
+        <p class="exp-org">eSpace AI Tech Private Limited &middot; Noida, India (Remote)</p>
+        <ul class="exp-bullets">
+          <li>Shipped a Flutter FAQ chatbot for the ICEcard app, alongside a Node.js triage service that scored, prioritized and routed incoming tickets automatically.</li>
+          <li>Ran a cohort analysis across user demographics and usability-tested the emergency-response flows those cohorts depended on most.</li>
+        </ul>
+      </div>
+
+      <!-- Constant -->
+      <div class="exp-card">
+        <div class="exp-head"><h3>Events Manager</h3><span class="exp-meta">2025 &ndash; Present</span></div>
+        <p class="exp-org">Sports Board, Students' Gymkhana Council, IIT Guwahati</p>
+        <ul class="exp-bullets">
+          <li>Managed campus-wide sports operations and event logistics for 8,000+ students, coordinating a 22-member board.</li>
+          <li>Ran the 2-month inter-hostel championship Spardha 2026 as Student Convener on a &#8377;10 lakh budget.</li>
+          <li>Launched "Frames," a new annual event onboarding freshers into sports without competitive pressure.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= SKILLS ================= -->
   <section id="skills" class="wrap section">
     <p class="eyebrow"><span class="eyebrow-line"></span> TELEMETRY</p>
     <h2 class="section-title">Technical Performance</h2>
 
     <div class="filter-row" role="tablist" aria-label="Filter skills by category">
-      <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Skills</button>
-      <button class="filter-btn" data-filter="mobile" role="tab" aria-selected="false">Mobile &amp; Frontend</button>
-      <button class="filter-btn" data-filter="backend" role="tab" aria-selected="false">Backend &amp; Data</button>
-      <button class="filter-btn" data-filter="tools" role="tab" aria-selected="false">Tools</button>
+      <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" data-track-content="pm">All Skills</button>
+      <button class="filter-btn" data-filter="prog" role="tab" aria-selected="false" data-track-content="pm">Programming</button>
+      <button class="filter-btn" data-filter="ds" role="tab" aria-selected="false" data-track-content="pm">Data Science &amp; AI</button>
+      <button class="filter-btn" data-filter="product" role="tab" aria-selected="false" data-track-content="pm">Product &amp; Analytics</button>
+      <button class="filter-btn" data-filter="platform" role="tab" aria-selected="false" data-track-content="pm">Platform &amp; Tools</button>
+
+      <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" data-track-content="civil">All Skills</button>
+      <button class="filter-btn" data-filter="civilbim" role="tab" aria-selected="false" data-track-content="civil">Civil &amp; BIM Engineering</button>
+      <button class="filter-btn" data-filter="devtools" role="tab" aria-selected="false" data-track-content="civil">Programming &amp; Dev Tools</button>
+
+      <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true" data-track-content="sde">All Skills</button>
+      <button class="filter-btn" data-filter="langs" role="tab" aria-selected="false" data-track-content="sde">Programming Languages</button>
+      <button class="filter-btn" data-filter="frameworks" role="tab" aria-selected="false" data-track-content="sde">Frameworks &amp; Tools</button>
+      <button class="filter-btn" data-filter="misc" role="tab" aria-selected="false" data-track-content="sde">Miscellaneous</button>
     </div>
 
     <p class="skill-note">Self-rated, based on time spent per stack &mdash; not a certified score.</p>
@@ -137,123 +266,255 @@
     </div>
 
     <div class="skill-grid" id="skillGrid">
-      <!-- mobile -->
-      <div class="skill-row" data-cat="mobile" style="--pct:90%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Flutter</span>
-          <span class="skill-pct">90%</span>
-        </div>
+
+      <!-- ===== PM+DS ===== -->
+      <div class="skill-row" data-track-content="pm" data-cat="prog" style="--pct:90%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
+        <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Python</span><span class="skill-pct">90%</span></div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="mobile" style="--pct:88%; --tier:var(--green); --tier-dark:var(--green-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Dart</span>
-          <span class="skill-pct">88%</span>
-        </div>
+      <div class="skill-row" data-track-content="pm" data-cat="prog" style="--pct:85%; --tier:var(--green); --tier-dark:var(--green-dark)">
+        <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><span class="skill-name">SQL</span><span class="skill-pct">85%</span></div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="mobile" style="--pct:80%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">HTML5 &amp; CSS3</span>
-          <span class="skill-pct">80%</span>
-        </div>
+      <div class="skill-row" data-track-content="pm" data-cat="prog" style="--pct:65%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><span class="skill-name">C++</span><span class="skill-pct">65%</span></div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="mobile" style="--pct:75%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">JavaScript</span>
-          <span class="skill-pct">75%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill"></div></div>
-      </div>
-      <div class="skill-row" data-cat="mobile" style="--pct:65%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">TypeScript</span>
-          <span class="skill-pct">65%</span>
-        </div>
-        <div class="skill-bar"><div class="skill-fill"></div></div>
-      </div>
-      <div class="skill-row" data-cat="mobile" style="--pct:70%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&#9673;</span><span class="skill-name">Figma</span>
-          <span class="skill-pct">70%</span>
-        </div>
+      <div class="skill-row" data-track-content="pm" data-cat="prog" style="--pct:50%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><span class="skill-name">JavaScript</span><span class="skill-pct">50%</span></div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
 
-      <!-- backend -->
-      <div class="skill-row" data-cat="backend" style="--pct:80%; --tier:var(--green); --tier-dark:var(--green-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Python</span>
-          <span class="skill-pct">80%</span>
-        </div>
+      <div class="skill-row" data-track-content="pm" data-cat="ds" style="--pct:88%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9673;</span><span class="skill-name">Pandas</span><span class="skill-pct">88%</span></div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="backend" style="--pct:85%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&#9670;</span><span class="skill-name">Firebase</span>
-          <span class="skill-pct">85%</span>
-        </div>
+      <div class="skill-row" data-track-content="pm" data-cat="ds" style="--pct:80%; --tier:var(--green); --tier-dark:var(--green-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9673;</span><span class="skill-name">XGBoost</span><span class="skill-pct">80%</span></div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="backend" style="--pct:65%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&#9670;</span><span class="skill-name">Node.js</span>
-          <span class="skill-pct">65%</span>
-        </div>
+      <div class="skill-row" data-track-content="pm" data-cat="ds" style="--pct:78%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9673;</span><span class="skill-name">NumPy</span><span class="skill-pct">78%</span></div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="backend" style="--pct:60%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Next.js</span>
-          <span class="skill-pct">60%</span>
-        </div>
+      <div class="skill-row" data-track-content="pm" data-cat="ds" style="--pct:75%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9673;</span><span class="skill-name">Scikit-learn</span><span class="skill-pct">75%</span></div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="backend" style="--pct:65%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&#9670;</span><span class="skill-name">MongoDB</span>
-          <span class="skill-pct">65%</span>
-        </div>
+      <div class="skill-row" data-track-content="pm" data-cat="ds" style="--pct:60%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9673;</span><span class="skill-name">TensorFlow</span><span class="skill-pct">60%</span></div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="backend" style="--pct:55%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&#9673;</span><span class="skill-name">Machine Learning</span>
-          <span class="skill-pct">55%</span>
-        </div>
+      <div class="skill-row" data-track-content="pm" data-cat="ds" style="--pct:58%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9673;</span><span class="skill-name">PyTorch</span><span class="skill-pct">58%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="pm" data-cat="ds" style="--pct:68%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9673;</span><span class="skill-name">NLP (BERT, LLMs)</span><span class="skill-pct">68%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="pm" data-cat="ds" style="--pct:50%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9673;</span><span class="skill-name">RDF &amp; SPARQL</span><span class="skill-pct">50%</span></div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
 
-      <!-- tools -->
-      <div class="skill-row" data-cat="tools" style="--pct:90%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&#9737;</span><span class="skill-name">Git &amp; GitHub</span>
-          <span class="skill-pct">90%</span>
-        </div>
+      <div class="skill-row" data-track-content="pm" data-cat="product" style="--pct:82%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">RICE &amp; MoSCoW</span><span class="skill-pct">82%</span></div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="tools" style="--pct:78%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&#9737;</span><span class="skill-name">Android Studio</span>
-          <span class="skill-pct">78%</span>
-        </div>
+      <div class="skill-row" data-track-content="pm" data-cat="product" style="--pct:76%; --tier:var(--green); --tier-dark:var(--green-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">Market Research</span><span class="skill-pct">76%</span></div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="tools" style="--pct:85%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&#9737;</span><span class="skill-name">Open-Source Workflows</span>
-          <span class="skill-pct">85%</span>
-        </div>
+      <div class="skill-row" data-track-content="pm" data-cat="product" style="--pct:72%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">KPI Design</span><span class="skill-pct">72%</span></div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
-      <div class="skill-row" data-cat="tools" style="--pct:88%; --tier:var(--green); --tier-dark:var(--green-dark)">
-        <div class="skill-head">
-          <span class="skill-icon">&#9737;</span><span class="skill-name">Hackathon Delivery</span>
-          <span class="skill-pct">88%</span>
-        </div>
+      <div class="skill-row" data-track-content="pm" data-cat="product" style="--pct:70%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">GTM Strategy</span><span class="skill-pct">70%</span></div>
         <div class="skill-bar"><div class="skill-fill"></div></div>
       </div>
+      <div class="skill-row" data-track-content="pm" data-cat="product" style="--pct:68%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9673;</span><span class="skill-name">Figma</span><span class="skill-pct">68%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+
+      <div class="skill-row" data-track-content="pm" data-cat="platform" style="--pct:85%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">Git</span><span class="skill-pct">85%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="pm" data-cat="platform" style="--pct:80%; --tier:var(--green); --tier-dark:var(--green-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9637;</span><span class="skill-name">MS Excel</span><span class="skill-pct">80%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="pm" data-cat="platform" style="--pct:68%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">Linux</span><span class="skill-pct">68%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="pm" data-cat="platform" style="--pct:65%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><span class="skill-name">REST APIs</span><span class="skill-pct">65%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="pm" data-cat="platform" style="--pct:62%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">Docker</span><span class="skill-pct">62%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="pm" data-cat="platform" style="--pct:58%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9670;</span><span class="skill-name">Node.js</span><span class="skill-pct">58%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="pm" data-cat="platform" style="--pct:55%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><span class="skill-name">React</span><span class="skill-pct">55%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="pm" data-cat="platform" style="--pct:50%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">HPC / Slurm</span><span class="skill-pct">50%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+
+      <!-- ===== CIVIL ===== -->
+      <div class="skill-row" data-track-content="civil" data-cat="civilbim" style="--pct:88%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">STAAD.Pro</span><span class="skill-pct">88%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="civil" data-cat="civilbim" style="--pct:82%; --tier:var(--green); --tier-dark:var(--green-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">Revit</span><span class="skill-pct">82%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="civil" data-cat="civilbim" style="--pct:75%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">AutoCAD</span><span class="skill-pct">75%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="civil" data-cat="civilbim" style="--pct:72%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9637;</span><span class="skill-name">MS Project</span><span class="skill-pct">72%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="civil" data-cat="civilbim" style="--pct:60%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9673;</span><span class="skill-name">Google Earth</span><span class="skill-pct">60%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="civil" data-cat="civilbim" style="--pct:45%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">Autodesk Fusion</span><span class="skill-pct">45%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="civil" data-cat="civilbim" style="--pct:42%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">STAAD Advanced Concrete</span><span class="skill-pct">42%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="civil" data-cat="civilbim" style="--pct:42%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">STAAD Foundation Advanced</span><span class="skill-pct">42%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="civil" data-cat="civilbim" style="--pct:40%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9637;</span><span class="skill-name">Primavera P6</span><span class="skill-pct">40%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+
+      <div class="skill-row" data-track-content="civil" data-cat="devtools" style="--pct:80%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9637;</span><span class="skill-name">MS Excel</span><span class="skill-pct">80%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="civil" data-cat="devtools" style="--pct:72%; --tier:var(--green); --tier-dark:var(--green-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">Git &amp; GitHub</span><span class="skill-pct">72%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="civil" data-cat="devtools" style="--pct:60%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><span class="skill-name">C++</span><span class="skill-pct">60%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="civil" data-cat="devtools" style="--pct:55%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9673;</span><span class="skill-name">Figma</span><span class="skill-pct">55%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="civil" data-cat="devtools" style="--pct:45%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Python</span><span class="skill-pct">45%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="civil" data-cat="devtools" style="--pct:40%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">Linux</span><span class="skill-pct">40%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+
+      <!-- ===== SDE ===== -->
+      <div class="skill-row" data-track-content="sde" data-cat="langs" style="--pct:90%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
+        <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Dart</span><span class="skill-pct">90%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="langs" style="--pct:82%; --tier:var(--green); --tier-dark:var(--green-dark)">
+        <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><span class="skill-name">Python</span><span class="skill-pct">82%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="langs" style="--pct:68%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><span class="skill-name">SQL</span><span class="skill-pct">68%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="langs" style="--pct:65%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><span class="skill-name">C++</span><span class="skill-pct">65%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="langs" style="--pct:50%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><span class="skill-name">HTML5 &amp; CSS3</span><span class="skill-pct">50%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="langs" style="--pct:50%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&lt;/&gt;</span><span class="skill-name">JavaScript</span><span class="skill-pct">50%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+
+      <div class="skill-row" data-track-content="sde" data-cat="frameworks" style="--pct:92%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9670;</span><span class="skill-name">Flutter</span><span class="skill-pct">92%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="frameworks" style="--pct:85%; --tier:var(--green); --tier-dark:var(--green-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">Git &amp; GitHub</span><span class="skill-pct">85%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="frameworks" style="--pct:78%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9670;</span><span class="skill-name">BLoC</span><span class="skill-pct">78%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="frameworks" style="--pct:72%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9670;</span><span class="skill-name">Atlassian Forge</span><span class="skill-pct">72%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="frameworks" style="--pct:70%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9670;</span><span class="skill-name">Node.js</span><span class="skill-pct">70%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="frameworks" style="--pct:68%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9670;</span><span class="skill-name">MongoDB</span><span class="skill-pct">68%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="frameworks" style="--pct:65%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9670;</span><span class="skill-name">Express</span><span class="skill-pct">65%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="frameworks" style="--pct:60%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">Docker</span><span class="skill-pct">60%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="frameworks" style="--pct:65%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">Linux</span><span class="skill-pct">65%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="frameworks" style="--pct:50%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">HPC / Slurm</span><span class="skill-pct">50%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+
+      <div class="skill-row" data-track-content="sde" data-cat="misc" style="--pct:75%; --tier:var(--purple); --tier-dark:var(--purple-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9673;</span><span class="skill-name">Figma</span><span class="skill-pct">75%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="misc" style="--pct:65%; --tier:var(--green); --tier-dark:var(--green-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">Revit</span><span class="skill-pct">65%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+      <div class="skill-row" data-track-content="sde" data-cat="misc" style="--pct:50%; --tier:var(--yellow); --tier-dark:var(--yellow-dark)">
+        <div class="skill-head"><span class="skill-icon">&#9737;</span><span class="skill-name">PyRevit</span><span class="skill-pct">50%</span></div>
+        <div class="skill-bar"><div class="skill-fill"></div></div>
+      </div>
+
     </div>
   </section>
 
@@ -264,28 +525,32 @@
 
     <div class="log-list">
       <div class="log-row">
-        <span class="log-year">2025</span>
-        <div><h3>Codegeist 2025</h3><p>Built FW47 for the Atlassian &times; Williams Racing challenge</p></div>
+        <span class="log-year">Nov '25</span>
+        <div><h3>Super Contributor</h3><p>Recognized as Level 6 Super Contributor at Hacktoberfest 2025 for open-source contributions</p></div>
       </div>
       <div class="log-row">
-        <span class="log-year">2025</span>
-        <div><h3>Hacktoberfest 2025</h3><p>Super Contributor level</p></div>
+        <span class="log-year">Oct '25</span>
+        <div><h3>Kabaddi &mdash; Silver Medal</h3><p>National Inter College Sports Fest (Spirit 2025), representing IIT Guwahati</p></div>
       </div>
       <div class="log-row">
-        <span class="log-year">2025</span>
-        <div><h3>Google Summer of Code</h3><p>Applicant</p></div>
+        <span class="log-year">Oct '25</span>
+        <div><h3>Ramleela 2025</h3><p>Direction &amp; Sounds team for the play organised by Brahmaputra Hostel, IIT Guwahati</p></div>
       </div>
       <div class="log-row">
-        <span class="log-year">2025</span>
-        <div><h3>MLH Global Hack Week</h3><p>Ranked Top 1% global hacker</p></div>
+        <span class="log-year">May '25</span>
+        <div><h3>Global Top 1%</h3><p>Ranked in the top 1% globally at Major League Hacking's Global Hack Week</p></div>
       </div>
       <div class="log-row">
-        <span class="log-year">2025</span>
-        <div><h3>FOSSHACK'25</h3><p>Participant</p></div>
+        <span class="log-year">May '25</span>
+        <div><h3>Mentor, Hackstart'25</h3><p>Mentored 50+ students in mobile app development and Flutter fundamentals (by SWC, IIT Guwahati)</p></div>
       </div>
       <div class="log-row">
-        <span class="log-year">2024</span>
-        <div><h3>Hacktoberfest 2024</h3><p>Contributor</p></div>
+        <span class="log-year">Feb '25</span>
+        <div><h3>Kabaddi &mdash; Bronze Medal</h3><p>Inter Hostel Sports Championship (Spardha 2025), IIT Guwahati</p></div>
+      </div>
+      <div class="log-row">
+        <span class="log-year">'23&ndash;24</span>
+        <div><h3>CRM Executive, Techniche'24</h3><p>Landed 2 sponsorship deals at IIT Guwahati's annual techno-management fest</p></div>
       </div>
     </div>
   </section>
@@ -297,16 +562,49 @@
 
     <div class="project-grid">
 
-      <article class="project-card">
+      <!-- PM+DS projects -->
+      <article class="project-card" data-track-content="pm">
+        <div class="project-media cover-plate cover-purple">
+          <span>Strata</span>
+        </div>
+        <div class="project-body">
+          <h3>Strata &mdash; Engineering Intent Extraction</h3>
+          <p>Layout-aware document extraction (LayoutLMv3 + PaddleOCR) that routes by document type, structures engineering intent into a JSON schema, and grounds missing parameters in an NBC/IS knowledge graph queried through SPARQL &mdash; with a traceable citation instead of a guess.</p>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">NLP</span><span class="tag">RDF/SPARQL</span></div>
+          <div class="link-row">
+            <a href="https://github.com/maiHydrogen/strata" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-track-content="pm">
+        <div class="project-media cover-plate cover-green">
+          <span>SQL</span>
+        </div>
+        <div class="project-body">
+          <h3>SQL-Driven Inventory Analytics</h3>
+          <p>Built 6+ SQL analytics pipelines across 109K+ inventory records and an XGBoost demand-forecast classifier, lifting minority-class precision by 22% and cutting holding costs 18% through 12+ SKU-level strategies.</p>
+          <div class="tag-row"><span class="tag">SQL</span><span class="tag">XGBoost</span><span class="tag">Python</span></div>
+          <div class="link-row">
+            <a href="https://github.com/maiHydrogen/Inventory_Analytics" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-track-content="pm">
         <div class="project-media">
           <img src="https://github.com/user-attachments/assets/5196f9f9-95d8-48f8-ab93-3e85c9895309" alt="FW47 logo, an AI race engineer for Jira" loading="lazy" decoding="async">
         </div>
         <div class="project-body">
-          <h3>FW47 &mdash; AI Race Engineer for Jira</h3>
-          <p>A Rovo AI agent reads live OpenF1 telemetry and surfaces repair procedures inside a Forge dashboard, built for the Atlassian &times; Williams Racing challenge.</p>
-          <div class="tag-row">
-            <span class="tag">JavaScript</span><span class="tag">Atlassian Forge</span><span class="tag">Rovo</span>
-          </div>
+          <h3>FW47 &mdash; Live F1 Telemetry Pipeline</h3>
+          <p>Scoped around a race engineer's real decision window &mdash; strategy calls made in seconds from feeds scattered across tools &mdash; then shipped a rule-based severity engine that surfaces threshold deviations in under 500ms and auto-files incidents to Jira.</p>
+          <div class="tag-row"><span class="tag">Product Thinking</span><span class="tag">Python</span><span class="tag">Atlassian Forge</span></div>
           <div class="link-row">
             <a href="https://github.com/maiHydrogen/FW47" target="_blank" rel="noopener">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
@@ -316,79 +614,139 @@
         </div>
       </article>
 
-      <article class="project-card">
-        <div class="project-media cover-plate cover-purple">
-          <span>Strata</span>
+      <article class="project-card" data-track-content="pm">
+        <div class="project-media cover-plate cover-blue">
+          <span>Grown</span>
         </div>
         <div class="project-body">
-          <h3>Strata &mdash; Intent-to-BIM Intelligence Engine</h3>
-          <p>Turns unstructured tender notices and scopes of work into populated 10D BIM models: a Python AI pipeline behind a Next.js frontend.</p>
-          <div class="tag-row">
-            <span class="tag">Python</span><span class="tag">Next.js</span><span class="tag">TypeScript</span>
-          </div>
+          <h3>Grown &mdash; Social Investing Feature</h3>
+          <p>Mapped user personas and 6+ trust/discoverability pain points in retail investing, prioritized features via RICE, and defined a GTM plan with launch KPIs (DAU, engagement rate) for a portfolio-sharing feature.</p>
+          <div class="tag-row"><span class="tag">Figma</span><span class="tag">RICE</span><span class="tag">GTM Strategy</span></div>
           <div class="link-row">
-            <a href="https://github.com/maiHydrogen/strata" target="_blank" rel="noopener">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
-              Pipeline
-            </a>
-            <a href="https://github.com/maiHydrogen/bimez" target="_blank" rel="noopener">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
-              Frontend
+            <a href="https://drive.google.com/drive/folders/1rkx_e4Bn7q9twC5kZftfUqwMTq6G8vbv?usp=sharing" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              Case Study
             </a>
           </div>
         </div>
       </article>
 
-      <article class="project-card">
+      <!-- Civil projects -->
+      <article class="project-card" data-track-content="civil">
+        <div class="project-media cover-plate cover-purple">
+          <span>Strata</span>
+        </div>
+        <div class="project-body">
+          <h3>Strata &mdash; Intent Extraction for BIM</h3>
+          <p>An end-to-end pipeline that parses tender and DPR documents to isolate structural specs from legal boilerplate, validates them against an NBC/IS knowledge graph via SPARQL, and generates code-compliant 2D/3D BIM layouts automatically.</p>
+          <div class="tag-row"><span class="tag">BIM</span><span class="tag">Revit API</span><span class="tag">Python</span></div>
+          <div class="link-row">
+            <a href="https://github.com/maiHydrogen/strata" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-track-content="civil">
+        <div class="project-media cover-plate cover-blue">
+          <span>RCC</span>
+        </div>
+        <div class="project-body">
+          <h3>RC Structural Analysis &amp; Seismic Design</h3>
+          <p>Modelled and analyzed a 4-storey (G+3) school building (80m &times; 111m) in STAAD.Pro under IS 1893:2016 Zone V seismic parameters, designing to the performance criteria in SP7:2026 and IS 8827:1978.</p>
+          <div class="tag-row"><span class="tag">STAAD.Pro</span><span class="tag">Seismic Design</span></div>
+          <div class="link-row"><span style="color:var(--mute); font-size:0.85rem;">Under Prof. Hemant B. Kaushik &middot; details on request</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-track-content="civil">
+        <div class="project-media cover-plate cover-red">
+          <span>LC3</span>
+        </div>
+        <div class="project-body">
+          <h3>Limestone-Blended Concrete Study</h3>
+          <p>Evaluated limestone as a cement performance enhancer against IS 18189:2023 (LC3) and IS 269 (OPC) &mdash; yielding 45&ndash;55 MPa 28-day strength, up to 50% clinker reduction, and 60% lower chloride diffusion versus traditional OPC.</p>
+          <div class="tag-row"><span class="tag">Concrete Materials</span><span class="tag">IS Codes</span></div>
+          <div class="link-row"><span style="color:var(--mute); font-size:0.85rem;">Materials case study &middot; details on request</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-track-content="civil">
+        <div class="project-media cover-plate cover-green">
+          <span>QTO</span>
+        </div>
+        <div class="project-body">
+          <h3>Residential Quantity Estimation &amp; Scheduling</h3>
+          <p>Estimated material quantities for a 76.9 sq.m. residential unit across 15+ civil items using Long Wall-Short Wall and Centerline methods, arriving at a &#8377;19.1 lakh budget and a 167-day CPM schedule in MS Project.</p>
+          <div class="tag-row"><span class="tag">MS Project</span><span class="tag">MS Excel</span></div>
+          <div class="link-row">
+            <a href="https://drive.google.com/drive/folders/1_8fpZO297S206J2d5mkdg-95rU8FtnNL?usp=sharing" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              Files
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- SDE projects -->
+      <article class="project-card" data-track-content="sde">
+        <div class="project-media cover-plate cover-purple">
+          <span>Strata</span>
+        </div>
+        <div class="project-body">
+          <h3>Strata &mdash; Automated Extraction Pipeline</h3>
+          <p>Document ingestion in Python routes PDFs through PyMuPDF and scans through PaddleOCR + LayoutLMv3, resolves NBC/IS clauses via an RDF knowledge graph over SPARQL, then encodes constraints as fitness rules in a DEAP genetic algorithm &mdash; routed through Revit via MCP for deterministic, LLM-free execution.</p>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">OCR</span><span class="tag">MCP</span></div>
+          <div class="link-row">
+            <a href="https://github.com/maiHydrogen/strata" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-track-content="sde">
+        <div class="project-media cover-plate cover-blue">
+          <span>OneStop</span>
+        </div>
+        <div class="project-body">
+          <h3>OneStop &mdash; IIT Guwahati Campus App</h3>
+          <p>Built a UI component library and an independent Events module for a campus app serving 5,900+ active users, architecting 2 decoupled packages with Clean Architecture, BLoC and DI across a 5-member team on a strict PR-based Git workflow.</p>
+          <div class="tag-row"><span class="tag">Flutter</span><span class="tag">BLoC</span><span class="tag">Clean Architecture</span></div>
+          <div class="link-row"><span style="color:var(--mute); font-size:0.85rem;">Student's Web Committee &middot; private repository</span></div>
+        </div>
+      </article>
+
+      <article class="project-card" data-track-content="sde">
+        <div class="project-media">
+          <img src="https://github.com/user-attachments/assets/5196f9f9-95d8-48f8-ab93-3e85c9895309" alt="FW47 logo, an AI race engineer for Jira" loading="lazy" decoding="async">
+        </div>
+        <div class="project-body">
+          <h3>FW47 &mdash; Live F1 Telemetry Pipeline</h3>
+          <p>A low-latency Python/Node.js microservice streaming live F1 telemetry at 50Hz, with a rule-based severity engine flagging threshold deviations in under 500ms and Atlassian Forge REST APIs pushing incidents straight into Jira.</p>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">Node.js</span><span class="tag">Atlassian Forge</span></div>
+          <div class="link-row">
+            <a href="https://github.com/maiHydrogen/FW47" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
+              Code
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-track-content="sde">
         <div class="project-media">
           <img src="https://github.com/user-attachments/assets/985b210e-ca7a-4a96-b479-9367e4538f45" alt="SortAid scholarship portal screenshot" loading="lazy" decoding="async">
         </div>
         <div class="project-body">
           <h3>SortAid</h3>
-          <p>Scrapes government, education-board and scholarship platforms to match available aid to a student's profile.</p>
-          <div class="tag-row">
-            <span class="tag">Python</span>
-          </div>
+          <p>Resilient Python scrapers aggregate 30,000+ scholarships from 6+ portals into MongoDB behind a componentized React UI, with profile-based CRUD and a ranking algorithm scoring matches by GPA, course, location and deadline.</p>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">MongoDB</span><span class="tag">React</span></div>
           <div class="link-row">
             <a href="https://github.com/maiHydrogen/SortAid" target="_blank" rel="noopener">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
-              Code
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-media">
-          <img src="https://github.com/user-attachments/assets/964b357f-b278-4271-a775-b683c1a16188" alt="USay real-time chat app screenshot" loading="lazy" decoding="async">
-        </div>
-        <div class="project-body">
-          <h3>USay</h3>
-          <p>Real-time cross-platform chat app with Firebase-backed presence, read receipts and push notifications. Built for Ethos'24.</p>
-          <div class="tag-row">
-            <span class="tag">Flutter</span><span class="tag">Firebase</span>
-          </div>
-          <div class="link-row">
-            <a href="https://github.com/maiHydrogen/USay" target="_blank" rel="noopener">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
-              Code
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-media cover-plate cover-red">
-          <span>ICE</span>
-        </div>
-        <div class="project-body">
-          <h3>ICEbot</h3>
-          <p>Published Flutter package: a FAQ chatbot with fuzzy multi-strategy search and a themeable Material UI.</p>
-          <div class="tag-row">
-            <span class="tag">Dart</span><span class="tag">Flutter</span>
-          </div>
-          <div class="link-row">
-            <a href="https://github.com/maiHydrogen/ICEbot" target="_blank" rel="noopener">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.3-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.6 0 0 .8-.3 2.7 1a9.3 9.3 0 015 0c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7 1 .7 2v3c0 .3.2.6.7.5A10 10 0 0022 12c0-5.5-4.5-10-10-10z" fill="currentColor"/></svg>
               Code
             </a>
@@ -433,7 +791,7 @@
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.9 8.65 22 11.4 22 14.7V21h-4v-5.6c0-1.34-.02-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97V21h-4V9z" fill="currentColor"/></svg>
             LinkedIn
           </a>
-          <a href="mailto:taespadhihary@gmail.com">
+          <a href="mailto:himanshu.4043@iitg.ac.in">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4V4z" stroke="currentColor" stroke-width="2"/><path d="M4 6l8 7 8-7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
             Email
           </a>
@@ -441,6 +799,10 @@
         <div class="side-card">
           <h3>Current Base</h3>
           <p>IIT Guwahati, Assam, India</p>
+        </div>
+        <div class="side-card">
+          <h3>Education</h3>
+          <p>B.Tech, Civil Engineering<br>Indian Institute of Technology, Guwahati<br>CGPA 7.02 &middot; 2023&ndash;Present</p>
         </div>
         <div class="side-card">
           <h3>Response Time</h3>

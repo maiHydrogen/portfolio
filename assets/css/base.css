@@ -1,0 +1,57 @@
+/* reset + global defaults. keep this file boring on purpose */
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Geist', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Unbounded','Geist',sans-serif; margin:0; text-wrap:balance;}
+a{color:inherit; text-decoration:none;}
+img{max-width:100%; display:block;}
+::selection{background:var(--red); color:#fff;}
+button{font-family:inherit;}
+
+/* layout helpers used all over the page */
+.wrap{ max-width:1200px; margin:0 auto; padding:0 clamp(1.25rem,4vw,2.5rem); }
+.section{ padding:clamp(3.5rem,7vw,5.5rem) clamp(1.25rem,4vw,2.5rem); }
+.center{ text-align:center; }
+
+/* small red kicker label above section titles (ABOUT ME, TELEMETRY, etc) */
+.eyebrow{
+  display:flex; align-items:center; gap:0.7rem;
+  font-family:'Geist',monospace; font-size:0.78rem;
+  letter-spacing:0.2em; text-transform:uppercase; color:var(--red);
+  margin-bottom:1rem;
+}
+.eyebrow.center{ justify-content:center; }
+.eyebrow-line{ width:28px; height:1px; background:var(--red); display:inline-block; }
+
+.section-title{ font-size:clamp(2rem,4vw,2.7rem); font-weight:700; margin-bottom:2.5rem; }
+
+/* red gradient line pinned to the very top of the viewport */
+.top-livery{
+  position:fixed; top:0; left:0; right:0; height:4px; z-index:60;
+  background:linear-gradient(90deg, var(--purple), var(--blue), var(--red), var(--purple));
+}
+
+/* fake scroll progress bar on the right edge, see scrollIndicator.js */
+.scroll-indicator{
+  position:fixed; right:10px; top:0; width:3px; height:110px;
+  background:var(--red); border-radius:2px; z-index:55;
+  transition:top .1s linear;
+  box-shadow:0 0 8px rgba(226,35,26,0.6);
+}
+@media (max-width:640px){ .scroll-indicator{ display:none; } }
+
+/* trackSwitch.js toggles this on whatever doesn't match the active track.
+   needs !important because a couple of the elements it hides also get
+   their display flipped by other scripts (the skill filter, mainly) */
+.track-hidden{ display:none !important; }
+
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  *{ transition:none !important; }
+}

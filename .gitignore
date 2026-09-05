@@ -1,0 +1,12 @@
+# editor/OS junk
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+
+# just in case I add tooling later
+node_modules/
+.env
+
+# vercel
+.vercel

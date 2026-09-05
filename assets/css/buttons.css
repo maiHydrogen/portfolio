@@ -1,0 +1,13 @@
+/* shared button styles - used in the hero (Get In Touch / Learn More)
+   and again on the contact form's submit button */
+.btn{
+  font-weight:600; font-size:0.95rem;
+  padding:0.9rem 1.7rem; border-radius:10px; border:1px solid var(--border);
+  display:inline-flex; align-items:center; gap:0.5rem;
+  transition:transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+}
+.btn-primary{ background:var(--red); border-color:var(--red); color:#fff; }
+.btn-primary:hover{ transform:translateY(-2px) scale(1.03); box-shadow:0 10px 24px -8px rgba(226,35,26,0.55); background:#f0342a; }
+.btn-ghost{ background:rgba(255,255,255,0.03); color:var(--ink); }
+.btn-ghost:hover{ transform:translateY(-2px) scale(1.03); border-color:var(--ink); }
+.btn-block{ width:100%; justify-content:center; }

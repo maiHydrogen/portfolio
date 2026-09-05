@@ -1,0 +1,20 @@
+/* colors, basically. everything else references these instead of
+   hardcoding hex codes so i can change the theme in one place */
+:root{
+  --bg:#0a0a0a;
+  --panel:#131313;
+  --panel-2:#171717;
+  --border:#262626;
+  --border-hover:#e2231a;
+  --ink:#f5f5f5;
+  --mute:#9a9a9a;
+  --red:#e2231a;
+  --red-dark:#a3160f;
+  --purple:#7c5cd6;
+  --blue:#3a6fd8;
+  --green:#3fbf77;
+  --green-dark:#1f7a48;
+  --purple-dark:#4f339c;
+  --yellow:#e0b23a;
+  --yellow-dark:#8a6a1a;
+}

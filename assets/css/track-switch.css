@@ -1,0 +1,5 @@
+/* the "choose a lens" buttons under the hero. these actually reuse
+   .filter-btn from skills.css for the look, this file just handles
+   the row/wrapper around them */
+.track-switch-section{ padding:1.5rem clamp(1.25rem,4vw,2.5rem) 0; text-align:center; }
+.track-switch{ display:flex; gap:0.7rem; flex-wrap:wrap; justify-content:center; }

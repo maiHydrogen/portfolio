@@ -1,0 +1,33 @@
+.project-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:1.6rem; }
+.project-card{
+  background:var(--panel); border:1px solid var(--border); border-radius:14px; overflow:hidden;
+  display:flex; flex-direction:column; transition:border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.project-card:hover{ border-color:var(--red); transform:translateY(-4px); box-shadow:0 16px 32px -18px rgba(0,0,0,0.6); }
+.project-media{ aspect-ratio:16/10; overflow:hidden; background:var(--panel-2); }
+.project-media img{ width:100%; height:100%; object-fit:cover; transition:transform .35s ease; }
+.project-card:hover .project-media img{ transform:scale(1.06); }
+
+/* fallback "cover" for projects I don't have a real screenshot for yet */
+.cover-plate{ display:flex; align-items:center; justify-content:center; }
+.cover-plate span{ font-family:'Unbounded',sans-serif; font-weight:700; font-size:1.6rem; letter-spacing:0.05em; color:rgba(255,255,255,0.9); }
+.cover-purple{ background:linear-gradient(135deg, #241a35, #3a2560); }
+.cover-red{ background:linear-gradient(135deg, #2a1210, var(--red-dark)); }
+.cover-green{ background:linear-gradient(135deg, #12261c, #1f5138); }
+.cover-blue{ background:linear-gradient(135deg, #151d2c, #23385c); }
+
+.project-body{ padding:1.4rem 1.4rem 1.5rem; display:flex; flex-direction:column; gap:0.7rem; flex:1; }
+.project-body h3{ font-size:1.08rem; font-weight:600; }
+.project-body > p{ color:var(--mute); font-size:0.88rem; line-height:1.6; margin:0; flex:1; }
+.tag-row{ display:flex; flex-wrap:wrap; gap:0.5rem; }
+.tag{
+  font-size:0.72rem; font-weight:500; color:var(--red);
+  background:rgba(226,35,26,0.1); border:1px solid rgba(226,35,26,0.35);
+  padding:0.28rem 0.65rem; border-radius:6px;
+}
+.link-row{ display:flex; gap:1.2rem; margin-top:0.2rem; }
+.link-row a{
+  display:inline-flex; align-items:center; gap:0.4rem; font-size:0.85rem; font-weight:500;
+  color:var(--mute); transition:color .18s ease;
+}
+.link-row a:hover{ color:var(--ink); }

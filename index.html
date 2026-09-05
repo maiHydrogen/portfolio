@@ -12,7 +12,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800&family=Geist:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css">
+
+<!-- split into one file per thing instead of one giant stylesheet, see README -->
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/buttons.css">
+<link rel="stylesheet" href="assets/css/nav.css">
+<link rel="stylesheet" href="assets/css/hero.css">
+<link rel="stylesheet" href="assets/css/track-switch.css">
+<link rel="stylesheet" href="assets/css/about.css">
+<link rel="stylesheet" href="assets/css/experience.css">
+<link rel="stylesheet" href="assets/css/skills.css">
+<link rel="stylesheet" href="assets/css/season-log.css">
+<link rel="stylesheet" href="assets/css/projects.css">
+<link rel="stylesheet" href="assets/css/contact.css">
+<link rel="stylesheet" href="assets/css/footer.css">
 </head>
 <body data-track="pm">
 
@@ -40,6 +54,7 @@
   <!-- ================= HERO ================= -->
   <section class="hero">
     <div class="hero-scene" aria-hidden="true">
+      <!-- photo by Clément Delacre on Unsplash, free to use -->
       <img class="hero-bg" src="https://images.unsplash.com/photo-1614949194403-9602bdc14a3a?auto=format&fit=crop&w=1920&q=70" alt="" loading="eager" fetchpriority="high">
       <div class="hero-vignette"></div>
     </div>
@@ -60,7 +75,9 @@
     </a>
   </section>
 
-  <!-- ================= TRACK SWITCH ================= -->
+  <!-- ================= TRACK SWITCH =================
+       lets a visitor pick which version of me they came here for.
+       defaults to Product & Data since that's mostly what I'm applying for rn -->
   <section class="wrap track-switch-section">
     <p class="eyebrow center"><span class="eyebrow-line"></span> CHOOSE A LENS <span class="eyebrow-line"></span></p>
     <div class="track-switch" role="tablist" aria-label="Choose which experience to view">
@@ -242,6 +259,8 @@
 
     <p class="skill-note">Self-rated, based on time spent per stack &mdash; not a certified score.</p>
 
+    <!-- yeah this is a lot of divs. wasn't sure how else to do 3 tabs x 4ish
+         categories each without a framework, open to better ideas -->
     <div class="skill-grid" id="skillGrid">
 
       <!-- ===== PM+DS ===== -->
@@ -793,6 +812,6 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

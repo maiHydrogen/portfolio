@@ -1,0 +1,42 @@
+.topbar{
+  position:sticky; top:4px; z-index:50;
+  background:rgba(10,10,10,0.85);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);
+}
+.topbar-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:1.1rem clamp(1.25rem,4vw,2.5rem);
+  max-width:1200px; margin:0 auto;
+}
+.brand{
+  display:flex; align-items:center; gap:0.7rem;
+  font-family:'Unbounded',sans-serif; font-weight:700; font-size:0.95rem; letter-spacing:0.02em;
+}
+
+/* the little red "1" badge - reused in the footer too (see footer.css) */
+.brand-mark{
+  width:34px; height:34px; border-radius:9px;
+  background:linear-gradient(155deg, var(--red), var(--red-dark));
+  display:inline-flex; align-items:center; justify-content:center;
+  position:relative; flex-shrink:0;
+}
+.brand-mark::after{
+  content:"1";
+  font-family:'Unbounded',sans-serif; font-weight:700; font-size:1.05rem;
+  line-height:1; color:#fff;
+}
+.brand-mark.small{ width:22px; height:22px; border-radius:6px; }
+.brand-mark.small::after{ font-size:0.68rem; }
+
+nav.links{ display:flex; gap:clamp(1.2rem,2.5vw,2.2rem); }
+nav.links a{
+  font-weight:500; font-size:0.95rem; color:var(--mute);
+  position:relative; padding-bottom:4px;
+}
+nav.links a::after{
+  content:""; position:absolute; left:0; bottom:0; height:2px; width:0;
+  background:var(--red); transition:width .25s ease;
+}
+nav.links a:hover, nav.links a:focus-visible{ color:var(--ink); }
+nav.links a:hover::after, nav.links a:focus-visible::after{ width:100%; }

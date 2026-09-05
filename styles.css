@@ -207,10 +207,7 @@ nav.links a:hover::after, nav.links a:focus-visible::after{ width:100%; }
 }
 .filter-btn:hover{ color:var(--ink); border-color:var(--ink); }
 .filter-btn.active{ background:var(--red); border-color:var(--red); color:#fff; }
-.skill-note{ color:var(--mute); font-size:0.82rem; margin:0 0 1rem; font-style:italic; }
-.skill-legend{ display:flex; gap:1.3rem; flex-wrap:wrap; margin:0 0 2rem; }
-.skill-legend span{ display:inline-flex; align-items:center; gap:0.5rem; font-size:0.82rem; color:var(--mute); }
-.skill-legend i{ width:9px; height:9px; border-radius:50%; display:inline-block; }
+.skill-note{ color:var(--mute); font-size:0.82rem; margin:0 0 2rem; font-style:italic; }
 
 .skill-grid{ display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
 .skill-row{

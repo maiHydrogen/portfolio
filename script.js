@@ -94,5 +94,5 @@ form.addEventListener('submit', (e) => {
 
   const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
   const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-  window.location.href = `mailto:himanshu.4043@iitg.ac.in?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:taespadhihary@gmail.com?subject=${subject}&body=${body}`;
 });
